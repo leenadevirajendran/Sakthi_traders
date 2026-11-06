@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 58" width="240" height="58">
+  <g transform="translate(4, 4)">
+    <circle cx="24" cy="25" r="21" fill="#0066B3"/>
+    <circle cx="24" cy="25" r="15" fill="#FFCC00"/>
+    <circle cx="24" cy="25" r="7.5" fill="#0066B3"/>
+    <circle cx="24" cy="25" r="3" fill="#FFFFFF"/>
+    <text x="54" y="27" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="25"><tspan fill="#E31B23" letter-spacing="0.5">MAK </tspan><tspan fill="#0066B3" font-size="13" font-weight="800" letter-spacing="0.5">LUBRICANTS</tspan></text>
+    <text x="55" y="43" font-family="'Montserrat', Arial, sans-serif" font-weight="700" font-size="8.5" fill="#5A6A80" letter-spacing="1.2">Bharat Petroleum</text>
+  </g>
+</svg>

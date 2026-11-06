@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 62" width="210" height="62">
+  <g transform="translate(5, 4)">
+    <!-- Iconic green badge container -->
+    <rect x="2" y="2" width="196" height="32" rx="5" fill="#75B827"/>
+    <!-- AMARON typography centered in green container -->
+    <text x="100" y="25" text-anchor="middle" font-family="'Arial Black', Impact, -apple-system, sans-serif" font-weight="900" font-size="22" fill="#000000" letter-spacing="2.5">AMARON</text>
+    <!-- Tagline situated with generous clearance below badge -->
+    <text x="100" y="49" text-anchor="middle" font-family="'Montserrat', Arial, sans-serif" font-weight="800" font-size="8" fill="#334155" letter-spacing="1.2">LASTS LONG, REALLY LONG.</text>
+  </g>
+</svg>

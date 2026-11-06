@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 58" width="200" height="58">
+  <g transform="translate(6, 4)">
+    <!-- Shell Pecten Emblem -->
+    <path d="M 23 3 C 11 3 4 13 4 27 C 4 35 11 41 16 41 L 30 41 C 35 41 42 35 42 27 C 42 13 35 3 23 3 Z" fill="#FBCE07" stroke="#DD1D21" stroke-width="2.5"/>
+    <path d="M 23 5 L 23 41 M 15 8 L 19 41 M 31 8 L 27 41 M 9 15 L 14 41 M 37 15 L 32 41" stroke="#DD1D21" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 14 41 L 32 41 L 30 45 L 16 45 Z" fill="#DD1D21"/>
+    <!-- Shell Wordmark -->
+    <text x="52" y="28" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="28" fill="#DD1D21" letter-spacing="0.5">Shell</text>
+    <!-- LUBRICANTS with ample clearance -->
+    <text x="53" y="44" font-family="'Montserrat', Arial, sans-serif" font-weight="800" font-size="9" fill="#0A192F" letter-spacing="2.2">LUBRICANTS</text>
+  </g>
+</svg>

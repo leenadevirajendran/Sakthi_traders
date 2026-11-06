@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 58" width="200" height="58">
+  <g transform="translate(5, 4)">
+    <!-- Red JK Badge -->
+    <rect x="2" y="3" width="46" height="42" rx="6" fill="#E31E24"/>
+    <text x="25" y="33" text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-weight="900" font-size="26" fill="#FFED00">JK</text>
+    <!-- TYRE -->
+    <text x="58" y="27" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="26" fill="#E31E24" letter-spacing="0.5">TYRE</text>
+    <!-- Tagline with ample clearance -->
+    <text x="59" y="43" font-family="'Montserrat', Arial, sans-serif" font-weight="800" font-size="8.5" fill="#1A202C" letter-spacing="2">TOTAL CONTROL</text>
+  </g>
+</svg>

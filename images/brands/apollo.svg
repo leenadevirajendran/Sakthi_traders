@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 62" width="200" height="62">
+  <g transform="translate(6, 4)">
+    <!-- apollo lowercase mark -->
+    <text x="88" y="27" text-anchor="middle" font-family="'Montserrat', 'Arial Black', -apple-system, sans-serif" font-weight="900" font-size="32" fill="#582C83" letter-spacing="-0.8">apollo</text>
+    <!-- signature red accent dot -->
+    <circle cx="162" cy="11" r="5" fill="#E31E24"/>
+    <!-- TYRES submark with ample clearance below descenders -->
+    <text x="88" y="48" text-anchor="middle" font-family="'Montserrat', Arial, sans-serif" font-weight="800" font-size="11" fill="#582C83" letter-spacing="6">TYRES</text>
+  </g>
+</svg>

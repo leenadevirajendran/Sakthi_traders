@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="pGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#163D8F"/>
+      <stop offset="100%" stop-color="#0A1D42"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#pGrad)"/>
+  <circle cx="300" cy="180" r="80" fill="none" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="4"/>
+  <circle cx="300" cy="180" r="60" fill="#B51220" fill-opacity="0.25"/>
+  <rect x="230" y="140" width="140" height="80" rx="8" fill="#102D65" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.5"/>
+  <text x="300" y="185" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-weight="800" font-size="28">GRE</text>
+  <text x="300" y="290" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-weight="700" font-size="22" letter-spacing="1">GREASE</text>
+  <text x="300" y="320" text-anchor="middle" fill="#FFA3AB" font-family="Inter, sans-serif" font-size="14">Heavy Machinery & High-Temperature Grease</text>
+  <rect x="180" y="350" width="240" height="34" rx="4" fill="rgba(255,255,255,0.1)"/>
+  <text x="300" y="372" text-anchor="middle" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="600" font-size="12">EP Lithium / Moly Extreme</text>
+</svg>

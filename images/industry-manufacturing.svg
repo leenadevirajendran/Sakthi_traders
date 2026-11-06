@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="mfgBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#102D65"/>
+      <stop offset="100%" stop-color="#202630"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#mfgBg)"/>
+  <rect x="20" y="20" width="560" height="360" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.15)"/>
+  <!-- Industrial Plant Motif -->
+  <circle cx="300" cy="220" r="60" fill="none" stroke="#B51220" stroke-width="4" stroke-dasharray="12 8"/>
+  <circle cx="300" cy="220" r="40" fill="#163D8F" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2"/>
+  <path d="M 160 280 L 220 200 L 220 280 M 380 280 L 380 180 L 440 280" stroke="#FFA3AB" stroke-width="2"/>
+  <text x="300" y="110" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-weight="800" font-size="22">MANUFACTURING &amp; INDUSTRIAL</text>
+  <text x="300" y="135" text-anchor="middle" fill="#FFA3AB" font-family="Inter, sans-serif" font-weight="600" font-size="12">HEAVY MACHINERY &bull; CASTING &bull; FABRICATION PLANTS</text>
+  <g transform="translate(180, 325)">
+    <rect width="240" height="30" rx="4" fill="rgba(255,255,255,0.1)"/>
+    <text x="120" y="20" text-anchor="middle" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="600" font-size="11">Hydraulic Oils &bull; EP Grease &bull; Maintenance Consumables</text>
+  </g>
+</svg>

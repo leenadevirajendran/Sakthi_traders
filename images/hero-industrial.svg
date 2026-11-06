@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1D42"/>
+      <stop offset="60%" stop-color="#102D65"/>
+      <stop offset="100%" stop-color="#163D8F"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="560" fill="url(#heroBg)"/>
+  <rect width="800" height="560" fill="url(#grid)"/>
+  <!-- Industrial Visual Graphic -->
+  <g transform="translate(100, 80)">
+    <rect x="0" y="0" width="600" height="380" rx="12" fill="#163D8F" fill-opacity="0.2" stroke="#DFE4EC" stroke-opacity="0.3" stroke-width="2"/>
+    <!-- Central Logistics Motif -->
+    <circle cx="300" cy="180" r="110" fill="none" stroke="#B51220" stroke-width="3" stroke-dasharray="8 6"/>
+    <circle cx="300" cy="180" r="85" fill="#102D65" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="2"/>
+    <!-- Gear & Truck / Industry Icon -->
+    <path d="M300 125 L308 140 L325 142 L312 154 L316 170 L300 162 L284 170 L288 154 L275 142 L292 140 Z" fill="#FFA3AB"/>
+    <text x="300" y="210" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-weight="700" font-size="20" letter-spacing="1">SAKTHI TRADERS</text>
+    <text x="300" y="235" text-anchor="middle" fill="#FFA3AB" font-family="Inter, sans-serif" font-weight="600" font-size="12" letter-spacing="3">SUPPLY CHAIN &amp; DISTRIBUTION</text>
+    <!-- Metric overlays -->
+    <g transform="translate(40, 290)">
+      <rect width="140" height="60" rx="6" fill="#102D65" stroke="#B51220" stroke-width="1.5"/>
+      <text x="70" y="28" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-weight="800" font-size="18">100%</text>
+      <text x="70" y="46" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Inter, sans-serif" font-size="9">OEM TESTED</text>
+    </g>
+    <g transform="translate(420, 290)">
+      <rect width="140" height="60" rx="6" fill="#102D65" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.5"/>
+      <text x="70" y="28" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat, sans-serif" font-weight="800" font-size="18">ISO 9001</text>
+      <text x="70" y="46" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Inter, sans-serif" font-size="9">CERTIFIED DEPOT</text>
+    </g>
+  </g>
+</svg>
