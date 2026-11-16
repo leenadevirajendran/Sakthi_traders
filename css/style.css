@@ -98,6 +98,9 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -107,6 +110,8 @@ body {
   color: var(--color-charcoal);
   background-color: var(--color-white);
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1801,7 +1806,9 @@ p:last-child {
 /* Specifications Table */
 .table-responsive {
   width: 100%;
+  max-width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
   background-color: var(--color-white);
@@ -2317,6 +2324,14 @@ p:last-child {
   align-items: center;
 }
 
+.intro-grid > *,
+.grid-2 > *,
+.grid-3 > *,
+.grid-4 > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
 .intro-image-wrap {
   position: relative;
   border-radius: var(--radius-md);
@@ -2662,40 +2677,27 @@ p:last-child {
 
 /* Mobile & Tablet (< 768px) */
 @media screen and (max-width: 768px) {
-  .hero-home {
-    background-image: 
-      linear-gradient(180deg, rgba(10, 29, 66, 0.96) 0%, rgba(16, 45, 101, 0.92) 50%, rgba(10, 29, 66, 0.97) 100%),
-      url('../images/hero-industrial-bg.jpg');
-    background-position: center center;
-    padding: var(--space-2xl) 0;
+  :root {
+    --container-gutter: 1.15rem;
   }
 
-  .page-banner--about {
-    background-image: 
-      linear-gradient(180deg, rgba(10, 29, 66, 0.96) 0%, rgba(16, 45, 101, 0.92) 50%, rgba(10, 29, 66, 0.97) 100%),
-      url('../images/banner-about.jpg');
-    background-position: center center;
+  /* Global Button Wrapping & Touch Sizing */
+  .btn {
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+    word-break: normal;
   }
 
-  .page-banner--products {
-    background-image: 
-      linear-gradient(180deg, rgba(10, 29, 66, 0.96) 0%, rgba(16, 45, 101, 0.92) 50%, rgba(10, 29, 66, 0.97) 100%),
-      url('../images/banner-products.jpg');
-    background-position: center center;
+  .btn-lg {
+    padding: 0.85rem 1.35rem;
+    font-size: var(--text-sm);
   }
 
-  .page-banner--brands {
-    background-image: 
-      linear-gradient(180deg, rgba(10, 29, 66, 0.96) 0%, rgba(16, 45, 101, 0.92) 50%, rgba(10, 29, 66, 0.97) 100%),
-      url('../images/banner-brands.jpg');
-    background-position: center center;
-  }
-
-  .page-banner--contact {
-    background-image: 
-      linear-gradient(180deg, rgba(10, 29, 66, 0.96) 0%, rgba(16, 45, 101, 0.92) 50%, rgba(10, 29, 66, 0.97) 100%),
-      url('../images/banner-contact.jpg');
-    background-position: center center;
+  /* Top Bar */
+  .top-bar {
+    padding: 0.35rem 0;
+    font-size: 0.75rem;
   }
 
   .top-bar__meta {
@@ -2704,6 +2706,32 @@ p:last-child {
 
   .top-bar__container {
     justify-content: center;
+  }
+
+  .top-bar__contact {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Sticky Navigation & Brand Header */
+  .navbar__container {
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+  }
+
+  .brand__logo-img {
+    height: 44px;
+  }
+
+  .brand__name {
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+  }
+
+  .brand__tagline {
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
   }
 
   .nav-toggle-label {
@@ -2778,16 +2806,155 @@ p:last-child {
     width: 100%;
   }
 
+  /* Hero Section */
+  .hero-home {
+    background-image: 
+      linear-gradient(180deg, rgba(10, 29, 66, 0.96) 0%, rgba(16, 45, 101, 0.92) 50%, rgba(10, 29, 66, 0.97) 100%),
+      url('../images/hero-industrial-bg.jpg');
+    background-position: center center;
+    padding: 3rem 0;
+  }
+
+  .hero-home__title {
+    font-size: clamp(1.85rem, 6vw, 2.35rem);
+    line-height: 1.18;
+    margin-bottom: 0.85rem;
+  }
+
+  .hero-home__lead {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.35rem;
+  }
+
+  .hero-home__actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+    margin-bottom: 1.35rem;
+  }
+
+  .hero-home__actions .btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Page Banners */
+  .page-banner {
+    padding: 2.75rem 0;
+  }
+
+  .page-banner__title {
+    font-size: clamp(1.75rem, 5.5vw, 2.25rem);
+    line-height: 1.2;
+    margin-bottom: 0.65rem;
+  }
+
+  .page-banner__lead {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .page-banner--about {
+    background-image: 
+      linear-gradient(180deg, rgba(10, 29, 66, 0.96) 0%, rgba(16, 45, 101, 0.92) 50%, rgba(10, 29, 66, 0.97) 100%),
+      url('../images/banner-about.jpg');
+    background-position: center center;
+  }
+
+  .page-banner--products {
+    background-image: 
+      linear-gradient(180deg, rgba(10, 29, 66, 0.96) 0%, rgba(16, 45, 101, 0.92) 50%, rgba(10, 29, 66, 0.97) 100%),
+      url('../images/banner-products.jpg');
+    background-position: center center;
+  }
+
+  .page-banner--brands {
+    background-image: 
+      linear-gradient(180deg, rgba(10, 29, 66, 0.96) 0%, rgba(16, 45, 101, 0.92) 50%, rgba(10, 29, 66, 0.97) 100%),
+      url('../images/banner-brands.jpg');
+    background-position: center center;
+  }
+
+  .page-banner--contact {
+    background-image: 
+      linear-gradient(180deg, rgba(10, 29, 66, 0.96) 0%, rgba(16, 45, 101, 0.92) 50%, rgba(10, 29, 66, 0.97) 100%),
+      url('../images/banner-contact.jpg');
+    background-position: center center;
+  }
+
+  /* Product & Brand Grids */
   .product-grid-4 {
     grid-template-columns: 1fr;
   }
 
+  .product-card__body {
+    padding: 1.25rem 1.15rem;
+  }
+
+  .product-card__specs {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .product-card__footer {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
   .brand-partner-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.875rem;
+  }
+
+  .brand-partner-slot {
+    padding: 1.15rem 0.875rem;
+    min-height: 96px;
+  }
+
+  .brand-partner-slot img {
+    max-height: 40px;
+    max-width: 85%;
+  }
+
+  .brand-partner-slot span {
+    font-size: 0.72rem;
+    margin-top: 0.35rem;
   }
 
   .brand-grid-4 {
     grid-template-columns: 1fr;
+  }
+
+  .brand-card-detailed {
+    padding: 1.35rem 1.15rem;
+  }
+
+  .brand-card-detailed .brand-logo-wrap {
+    height: 72px;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .brand-card-detailed .brand-logo-wrap img {
+    max-height: 48px;
+    max-width: 85%;
+  }
+
+  /* RFQ Form Elements */
+  .rfq-form {
+    padding: 1.5rem 1.15rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.75rem;
   }
 
   .trust-bar__grid {
@@ -2841,11 +3008,28 @@ p:last-child {
 /* Small Mobile (< 480px) */
 @media screen and (max-width: 480px) {
   :root {
-    --container-gutter: 1rem;
+    --container-gutter: 0.875rem;
+  }
+
+  .top-bar {
+    font-size: 0.68rem;
+    padding: 0.3rem 0;
+  }
+
+  .top-bar__contact {
+    gap: 0.5rem;
+  }
+
+  .brand__logo-img {
+    height: 38px;
   }
 
   .brand__name {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
+  }
+
+  .brand__tagline {
+    font-size: 0.58rem;
   }
 
   .brand__mark {
@@ -2854,13 +3038,53 @@ p:last-child {
     font-size: 1.15rem;
   }
 
-  .top-bar {
-    font-size: 0.7rem;
+  .hero-home {
+    padding: 2.5rem 0;
+  }
+
+  .hero-home__title {
+    font-size: 1.85rem;
+  }
+
+  .page-banner {
+    padding: 2.25rem 0;
+  }
+
+  .page-banner__title {
+    font-size: 1.7rem;
   }
 
   .section {
-    padding-top: var(--space-2xl);
-    padding-bottom: var(--space-2xl);
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+
+  .rfq-form {
+    padding: 1.15rem 0.85rem;
+  }
+
+  .brand-partner-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+
+  .brand-partner-slot {
+    padding: 0.875rem 0.5rem;
+  }
+
+  .brand-partner-slot img {
+    max-height: 36px;
+    max-width: 90%;
+  }
+
+  .product-card__footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .product-card__footer .btn {
+    width: 100%;
+    text-align: center;
   }
 }
 
