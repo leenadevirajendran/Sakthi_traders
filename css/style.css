@@ -2678,7 +2678,57 @@ p:last-child {
 /* Mobile & Tablet (< 768px) */
 @media screen and (max-width: 768px) {
   :root {
-    --container-gutter: 1.15rem;
+    --container-gutter: 0.75rem;
+  }
+
+  /* Global Section Padding */
+  .section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .section-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .section-header--center {
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin-bottom: 0.35rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.78rem;
+    line-height: 1.45;
+    margin-bottom: 0;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  .eyebrow {
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Text Alignment Justification across Mobile View */
+  .hero-home__lead,
+  .page-banner__lead,
+  .product-card__desc,
+  .feature-card__desc,
+  .brand-card-desc,
+  .industry-card__body p,
+  .info-detail,
+  .lead,
+  .footer-desc {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
   }
 
   /* Global Button Wrapping & Touch Sizing */
@@ -2687,17 +2737,24 @@ p:last-child {
     text-align: center;
     max-width: 100%;
     word-break: normal;
+    padding: 0.65rem 1rem;
+    font-size: 0.78rem;
   }
 
   .btn-lg {
-    padding: 0.85rem 1.35rem;
-    font-size: var(--text-sm);
+    padding: 0.75rem 1.15rem;
+    font-size: 0.82rem;
+  }
+
+  .btn-sm {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.7rem;
   }
 
   /* Top Bar */
   .top-bar {
-    padding: 0.35rem 0;
-    font-size: 0.75rem;
+    padding: 0.3rem 0;
+    font-size: 0.72rem;
   }
 
   .top-bar__meta {
@@ -2716,21 +2773,21 @@ p:last-child {
 
   /* Sticky Navigation & Brand Header */
   .navbar__container {
-    padding-top: 0.65rem;
-    padding-bottom: 0.65rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
   }
 
   .brand__logo-img {
-    height: 44px;
+    height: 40px;
   }
 
   .brand__name {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     letter-spacing: -0.01em;
   }
 
   .brand__tagline {
-    font-size: 0.62rem;
+    font-size: 0.6rem;
     letter-spacing: 0.04em;
   }
 
@@ -2806,33 +2863,35 @@ p:last-child {
     width: 100%;
   }
 
-  /* Hero Section */
+  /* Hero Section (Compact & Proportional) */
   .hero-home {
     background-image: 
       linear-gradient(180deg, rgba(10, 29, 66, 0.96) 0%, rgba(16, 45, 101, 0.92) 50%, rgba(10, 29, 66, 0.97) 100%),
       url('../images/hero-industrial-bg.jpg');
     background-position: center center;
-    padding: 3rem 0;
+    padding: 2.25rem 0;
   }
 
   .hero-home__title {
-    font-size: clamp(1.85rem, 6vw, 2.35rem);
-    line-height: 1.18;
-    margin-bottom: 0.85rem;
+    font-size: clamp(1.65rem, 5.5vw, 2.1rem);
+    line-height: 1.15;
+    margin-bottom: 0.65rem;
   }
 
   .hero-home__lead {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1.35rem;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    margin-bottom: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   .hero-home__actions {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 0.75rem;
-    margin-bottom: 1.35rem;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
   }
 
   .hero-home__actions .btn {
@@ -2843,18 +2902,20 @@ p:last-child {
 
   /* Page Banners */
   .page-banner {
-    padding: 2.75rem 0;
+    padding: 2rem 0;
   }
 
   .page-banner__title {
-    font-size: clamp(1.75rem, 5.5vw, 2.25rem);
-    line-height: 1.2;
-    margin-bottom: 0.65rem;
+    font-size: clamp(1.5rem, 5vw, 1.95rem);
+    line-height: 1.18;
+    margin-bottom: 0.45rem;
   }
 
   .page-banner__lead {
-    font-size: 0.92rem;
-    line-height: 1.6;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   .page-banner--about {
@@ -2885,85 +2946,527 @@ p:last-child {
     background-position: center center;
   }
 
-  /* Product & Brand Grids */
+  /* ================= 2-IN-A-ROW (2 COLUMNS) FOR ALL MOBILE SECTIONS ================= */
+  
+  /* 1. Product Cards (2 in a row) */
   .product-grid-4 {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border-radius: var(--radius-sm);
+  }
+
+  .product-card__image-wrap {
+    aspect-ratio: 16 / 10;
+    max-height: 105px;
+  }
+
+  .product-card__badge {
+    font-size: 0.58rem;
+    padding: 0.15rem 0.35rem;
+    top: 6px;
+    left: 6px;
   }
 
   .product-card__body {
-    padding: 1.25rem 1.15rem;
+    padding: 0.65rem 0.55rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .product-card__category {
+    font-size: 0.58rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.15rem;
+  }
+
+  .product-card__title {
+    font-size: 0.82rem;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+  }
+
+  .product-card__desc {
+    font-size: 0.68rem;
+    line-height: 1.35;
+    margin-bottom: 0.35rem;
+    text-align: justify;
+    text-justify: inter-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .product-card__specs {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
+    margin-bottom: 0.35rem;
+    padding-top: 0.25rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .product-spec-item {
+    font-size: 0.6rem;
+    padding: 0.15rem 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+
+  .product-spec-item span {
+    font-size: 0.58rem;
+    color: var(--color-charcoal-muted);
+  }
+
+  .product-spec-item strong {
+    font-size: 0.62rem;
+    color: var(--color-navy);
   }
 
   .product-card__footer {
-    flex-wrap: wrap;
-    gap: 0.75rem;
+    padding-top: 0.35rem;
+    gap: 0.25rem;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: auto;
+    border-top: 1px solid var(--color-border);
   }
 
-  .brand-partner-grid {
+  .product-card__footer .badge {
+    font-size: 0.55rem;
+    padding: 0.15rem 0.25rem;
+    text-align: center;
+  }
+
+  .product-card__footer .btn {
+    font-size: 0.68rem;
+    padding: 0.35rem 0.45rem;
+    width: 100%;
+    text-align: center;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 2. Grid-4, Grid-3, Grid-2 (2 in a row) */
+  .grid-4 {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.875rem;
+    gap: 0.65rem;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+
+  .grid-3 > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+
+  /* Feature Cards in Grid (Advantage / Values) */
+  .feature-card {
+    padding: 0.75rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border-radius: var(--radius-sm);
+  }
+
+  .feature-number {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .feature-card__icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.35rem;
+  }
+
+  .feature-card__icon .icon-svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .feature-card__title {
+    font-size: 0.82rem;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+  }
+
+  .feature-card__desc {
+    font-size: 0.68rem;
+    line-height: 1.35;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  /* Industry Cards in Grid-3 (Heavy Engineering, Automotive, Infrastructure) */
+  .industry-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border-radius: var(--radius-sm);
+  }
+
+  .industry-card__header {
+    padding: 0.55rem 0.5rem;
+    gap: 0.35rem;
+  }
+
+  .industry-card__icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .industry-card__icon .icon-svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .industry-card__title {
+    font-size: 0.78rem;
+    line-height: 1.2;
+  }
+
+  .industry-card__body {
+    padding: 0.65rem 0.55rem;
+    font-size: 0.68rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .industry-card__body p {
+    font-size: 0.68rem;
+    line-height: 1.35;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .industry-card__list {
+    font-size: 0.6rem;
+    gap: 0.2rem;
+    margin: 0.35rem 0;
+  }
+
+  /* Vision and Mission Cards in Grid-2 (About Us) */
+  .grid-2 > div {
+    padding: 0.85rem 0.65rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .grid-2 > div h3 {
+    font-size: 0.85rem !important;
+    margin-top: 0.35rem !important;
+    margin-bottom: 0.35rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .grid-2 > div p {
+    font-size: 0.68rem !important;
+    line-height: 1.35 !important;
+    text-align: justify !important;
+    text-justify: inter-word !important;
+  }
+
+  /* Contact Page Info Cards in Grid-3 */
+  .grid-3 > div {
+    padding: 0.85rem 0.65rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .contact-card-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.35rem;
+  }
+
+  .contact-card-icon .icon-svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .grid-3 > div h3 {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .grid-3 > div p {
+    font-size: 0.68rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0.4rem !important;
+    text-align: justify !important;
+    text-justify: inter-word !important;
+  }
+
+  .grid-3 > div .btn {
+    font-size: 0.7rem;
+    padding: 0.45rem 0.5rem;
+  }
+
+  /* 3. Detailed Brand Cards (2 in a row on Brands & Industries) */
+  .brand-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+
+  .brand-card-detailed {
+    padding: 0.75rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border-radius: var(--radius-sm);
+  }
+
+  .brand-card-detailed .brand-logo-wrap {
+    height: 48px;
+    margin-bottom: 0.35rem;
+    padding: 0.3rem 0.4rem;
+  }
+
+  .brand-card-detailed .brand-logo-wrap img {
+    max-height: 30px;
+    max-width: 85%;
+  }
+
+  .brand-category-pill {
+    font-size: 0.56rem;
+    padding: 0.15rem 0.35rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .brand-card-title {
+    font-size: 0.82rem;
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+  }
+
+  .brand-card-desc {
+    font-size: 0.68rem;
+    line-height: 1.35;
+    margin-bottom: 0.35rem;
+    text-align: justify;
+    text-justify: inter-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .brand-card-footer {
+    margin-top: auto;
+    padding-top: 0.35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .brand-sourcing-tag {
+    font-size: 0.6rem;
+  }
+
+  .brand-explore-link {
+    font-size: 0.65rem;
+  }
+
+  /* 4. Brand Partner Showcase (Home page 2 in a row) */
+  .brand-partner-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
   }
 
   .brand-partner-slot {
-    padding: 1.15rem 0.875rem;
-    min-height: 96px;
+    padding: 0.75rem 0.5rem;
+    min-height: 76px;
+    border-radius: var(--radius-sm);
   }
 
   .brand-partner-slot img {
-    max-height: 40px;
+    max-height: 30px;
     max-width: 85%;
   }
 
   .brand-partner-slot span {
+    font-size: 0.65rem;
+    margin-top: 0.25rem;
+  }
+
+  /* 5. Trust Bar (2 in a row) */
+  .trust-bar__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .trust-bar__item {
+    padding: 0.65rem 0.5rem;
+    gap: 0.4rem;
+  }
+
+  .trust-bar__item:nth-child(1),
+  .trust-bar__item:nth-child(3) {
+    border-right: 1px solid var(--color-border);
+  }
+
+  .trust-bar__item:nth-child(2),
+  .trust-bar__item:nth-child(4) {
+    border-right: none;
+  }
+
+  .trust-bar__item:nth-child(-n+2) {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .trust-bar__icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .trust-bar__icon .icon-svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .trust-bar__num {
+    font-size: 0.82rem;
+  }
+
+  .trust-bar__label {
+    font-size: 0.6rem;
+    line-height: 1.2;
+  }
+
+  /* 6. Sub-Spec Grid (Products page 2 in a row) */
+  .sub-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.45rem;
+  }
+
+  .sub-spec-item {
+    padding: 0.5rem 0.55rem;
+  }
+
+  .sub-spec-item strong {
+    font-size: 0.65rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .sub-spec-item span {
+    font-size: 0.6rem;
+    line-height: 1.3;
+    text-align: justify;
+    text-justify: inter-word;
+    display: block;
+  }
+
+  /* 7. Corporate Info Table Grid (About Us 2 in a row) */
+  .info-table-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+
+  .info-item {
+    padding: 0.75rem 0.6rem;
+  }
+
+  .info-label {
+    font-size: 0.58rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .info-value {
+    font-size: 0.78rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .info-detail {
+    font-size: 0.65rem;
+    line-height: 1.35;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  /* 8. Footer Grid (2 in a row) */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 0.75rem;
+  }
+
+  .footer-col h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links {
+    gap: 0.35rem;
+  }
+
+  .footer-links li a,
+  .footer-contact-item {
     font-size: 0.72rem;
-    margin-top: 0.35rem;
   }
 
-  .brand-grid-4 {
-    grid-template-columns: 1fr;
-  }
-
-  .brand-card-detailed {
-    padding: 1.35rem 1.15rem;
-  }
-
-  .brand-card-detailed .brand-logo-wrap {
-    height: 72px;
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .brand-card-detailed .brand-logo-wrap img {
-    max-height: 48px;
-    max-width: 85%;
+  .footer-desc {
+    font-size: 0.72rem;
+    line-height: 1.4;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   /* RFQ Form Elements */
   .rfq-form {
-    padding: 1.5rem 1.15rem;
+    padding: 1.25rem 0.95rem;
   }
 
   .form-grid {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
+    gap: 0.65rem;
   }
 
   .form-group {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.65rem;
   }
 
-  .trust-bar__grid {
-    grid-template-columns: 1fr;
+  .form-label {
+    font-size: 0.68rem;
   }
 
-  .trust-bar__item {
-    border-right: none;
-    border-bottom: 1px solid var(--color-border);
+  .form-control, .form-select, .form-textarea {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.75rem;
   }
 
   .portfolio-domain-item {
@@ -2971,27 +3474,23 @@ p:last-child {
     gap: var(--space-md);
   }
 
-  .info-table-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .sub-spec-grid {
-    grid-template-columns: 1fr;
-  }
-
   .cta-banner {
     flex-direction: column;
     text-align: center;
     align-items: stretch;
+    padding: 1.75rem 1rem;
   }
 
-  .grid-2, .grid-3, .grid-4 {
-    grid-template-columns: 1fr;
+  .cta-banner__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.35rem;
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-xl);
+  .cta-banner__lead {
+    font-size: 0.78rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   .footer-bottom__container {
@@ -3008,83 +3507,98 @@ p:last-child {
 /* Small Mobile (< 480px) */
 @media screen and (max-width: 480px) {
   :root {
-    --container-gutter: 0.875rem;
+    --container-gutter: 0.65rem;
   }
 
   .top-bar {
-    font-size: 0.68rem;
-    padding: 0.3rem 0;
+    font-size: 0.66rem;
+    padding: 0.25rem 0;
   }
 
   .top-bar__contact {
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 
   .brand__logo-img {
-    height: 38px;
+    height: 36px;
   }
 
   .brand__name {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .brand__tagline {
-    font-size: 0.58rem;
+    font-size: 0.55rem;
   }
 
   .brand__mark {
-    width: 38px;
-    height: 38px;
-    font-size: 1.15rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
   }
 
   .hero-home {
-    padding: 2.5rem 0;
+    padding: 2rem 0;
   }
 
   .hero-home__title {
-    font-size: 1.85rem;
+    font-size: 1.55rem;
+  }
+
+  .hero-home__lead {
+    font-size: 0.78rem;
   }
 
   .page-banner {
-    padding: 2.25rem 0;
+    padding: 1.75rem 0;
   }
 
   .page-banner__title {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
 
   .section {
-    padding-top: 2.25rem;
-    padding-bottom: 2.25rem;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
   }
 
-  .rfq-form {
-    padding: 1.15rem 0.85rem;
+  .product-grid-4,
+  .brand-grid-4,
+  .brand-partner-grid,
+  .grid-4,
+  .grid-3,
+  .grid-2,
+  .info-table-grid {
+    gap: 0.5rem;
   }
 
-  .brand-partner-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.65rem;
+  .product-card__body,
+  .feature-card,
+  .brand-card-detailed {
+    padding: 0.55rem 0.45rem;
   }
 
-  .brand-partner-slot {
-    padding: 0.875rem 0.5rem;
+  .product-card__title,
+  .feature-card__title,
+  .brand-card-title {
+    font-size: 0.78rem;
   }
 
-  .brand-partner-slot img {
-    max-height: 36px;
-    max-width: 90%;
-  }
-
-  .product-card__footer {
-    flex-direction: column;
-    align-items: stretch;
+  .product-card__desc,
+  .feature-card__desc,
+  .brand-card-desc {
+    font-size: 0.65rem;
+    line-height: 1.3;
   }
 
   .product-card__footer .btn {
-    width: 100%;
-    text-align: center;
+    font-size: 0.65rem;
+    padding: 0.3rem 0.4rem;
+    min-height: 28px;
+  }
+
+  .rfq-form {
+    padding: 1rem 0.75rem;
   }
 }
 
