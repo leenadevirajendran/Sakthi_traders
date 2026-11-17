@@ -1143,39 +1143,16 @@ p:last-child {
   gap: 0.5rem;
 }
 
-/* Interactive Badge Button (e.g. Bulk Stock) */
-.badge-btn,
 .product-card__footer .badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  text-decoration: none;
-  font-weight: 700;
   font-size: 0.72rem;
   letter-spacing: 0.04em;
-  padding: 0.35rem 0.75rem;
+  padding: 0.3rem 0.7rem;
   border-radius: var(--radius-xs);
   border: 1px solid var(--color-border);
   background-color: var(--color-light-grey);
   color: var(--color-navy);
-  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-  user-select: none;
-}
-
-.badge-btn:hover,
-.product-card__footer .badge:hover {
-  background-color: var(--color-navy) !important;
-  color: #FFFFFF !important;
-  border-color: var(--color-navy) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(16, 45, 101, 0.25);
-}
-
-.badge-btn:active,
-.product-card__footer .badge:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(16, 45, 101, 0.2);
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .product-card__footer .btn {
@@ -3435,15 +3412,10 @@ p:last-child {
     border-top: 1px solid var(--color-border);
   }
 
-  .product-card__footer .badge,
-  .product-card__footer .badge-btn {
-    font-size: 0.58rem;
-    padding: 0.2rem 0.35rem;
+  .product-card__footer .badge {
+    font-size: 0.55rem;
+    padding: 0.15rem 0.25rem;
     text-align: center;
-    min-height: 24px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .product-card__footer .btn {
