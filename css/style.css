@@ -1050,7 +1050,7 @@ p:last-child {
   margin-right: auto;
 }
 
-/* 4-Column Product Grid */
+/* Product Showcase Grid (4 Columns Desktop, 2 Tablet, 1 Mobile) */
 .product-grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2689,13 +2689,6 @@ p:last-child {
   opacity: 0.35;
   line-height: 1;
   margin-bottom: var(--space-2xs);
-}
-
-/* Product Grid 4 Columns */
-.product-grid-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-lg);
 }
 
 /* Brand Showcase Grid (8 Authenticated Principal Brands) */

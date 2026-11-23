@@ -1,7 +1,7 @@
 # Sakthi Traders — Official Corporate Website
 
 > **Premier Industrial Supplies Partner**  
-> Supplying certified commercial vehicle tyres, industrial batteries, heavy machinery lubricants, grease, structural steel, primary cement, cotton waste, and graded blue metal aggregates to manufacturing plants, transport fleets, and infrastructure contractors across India.
+> Supplying certified commercial vehicle tyres, commercial vehicle filter kits, Gulf engine lubricants, AdBlue® diesel exhaust fluid, industrial batteries, heavy machinery lubricants, grease, structural steel, primary cement, cotton waste, and graded blue metal aggregates to manufacturing plants, transport fleets, and infrastructure contractors across India.
 
 ---
 
@@ -16,16 +16,19 @@
 
 ---
 
-## 📦 Core Product Portfolio (8 Divisions)
+## 📦 Core Product Portfolio (11 Divisions)
 
 1. **Commercial & Heavy Tyres** — Apollo Tyres & JK Tyre authorized fleet radials, tipper haulage, and OTR tyres.
-2. **Industrial & Traction Batteries** — Amaron high-CCA zero-maintenance heavy commercial starting & deep-cycle power.
-3. **Machinery Lubricants** — MAK Lubricants (BPCL), Castrol Industrial, and Shell hydraulic, turbine, and engine oils.
-4. **Heavy Duty Grease** — Extreme-pressure lithium complex, wheel bearing, and high-temp industrial grease.
-5. **Commercial Cement** — Zuari Cement (HeidelbergCement) 53 Grade OPC and PPC compliant with IS 269 & IS 1489.
-6. **Structural Steel & Rebars** — Suryadev TMT Fe 550D primary billets, MS angles, channels, beams, and plates.
-7. **Industrial Cotton Waste** — 100% cotton unbleached white yarn waste and machinery cleaning wiping rags.
-8. **Graded Blue Metal Aggregates** — Machine-crushed hard granite blue metals (10mm, 20mm, 40mm, M-Sand / P-Sand).
+2. **Commercial Vehicle Filter Kits** — Heavy-duty PM filtration packs (fuel, oil, water separators, radial seal air cleaners, air dryers) for HCV, MCV, tippers, and earthmovers.
+3. **Gulf Lubricants & Commercial Engine Oils** — Authorized Gulf Oil India commercial fleet engine oils (Gulf Superfleet, Power Trac, Pride 4T).
+4. **Gulf AdBlue® Diesel Exhaust Fluid (DEF)** — ISO 22241 & IS 17042 certified 32.5% aqueous urea solution (AUS 32) for BS-VI SCR emission systems.
+5. **Industrial & Traction Batteries** — Amaron high-CCA zero-maintenance heavy commercial starting & deep-cycle power.
+6. **Machinery Lubricants** — MAK Lubricants (BPCL), Castrol Industrial, and Shell hydraulic, turbine, and engine oils.
+7. **Heavy Duty Grease** — Extreme-pressure lithium complex, wheel bearing, and high-temp industrial grease.
+8. **Commercial Cement** — Zuari Cement (HeidelbergCement) 53 Grade OPC and PPC compliant with IS 269 & IS 1489.
+9. **Structural Steel & Rebars** — Suryadev TMT Fe 550D primary billets, MS angles, channels, beams, and plates.
+10. **Industrial Cotton Waste** — 100% cotton unbleached white yarn waste and machinery cleaning wiping rags.
+11. **Graded Blue Metal Aggregates** — Machine-crushed hard granite blue metals (10mm, 20mm, 40mm, M-Sand / P-Sand).
 
 ---
 
@@ -33,6 +36,7 @@
 
 - **Apollo Tyres**
 - **JK Tyre**
+- **Gulf Oil Lubricants & AdBlue®**
 - **Amaron Batteries**
 - **MAK Lubricants** (Bharat Petroleum)
 - **Castrol Industrial**
