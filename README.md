@@ -29,6 +29,7 @@
 9. **Structural Steel & Rebars** — Suryadev TMT Fe 550D primary billets, MS angles, channels, beams, and plates.
 10. **Industrial Cotton Waste** — 100% cotton unbleached white yarn waste and machinery cleaning wiping rags.
 11. **Graded Blue Metal Aggregates** — Machine-crushed hard granite blue metals (10mm, 20mm, 40mm, M-Sand / P-Sand).
+12. **GSB & Wet Mix Macadam (WMM)** — Plant-mixed Granular Sub-Base (GSB) and Wet Mix Macadam conforming to MoRTH specifications for high-load highway and industrial pavement sub-bases.
 
 ---
 
