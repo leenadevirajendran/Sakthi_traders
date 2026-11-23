@@ -2971,6 +2971,246 @@ p:last-child {
   box-shadow: var(--shadow-hover);
 }
 
+/* ==========================================================================
+   PRODUCT DIVISION SHOWCASE (Senior UI/UX Proportional Redesign)
+   ========================================================================== */
+
+.product-division {
+  padding: 3.25rem 0;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  scroll-margin-top: 130px;
+}
+
+.product-division.bg-white {
+  background-color: var(--color-white);
+}
+
+.product-division.bg-light {
+  background-color: #F8FAFC;
+}
+
+.product-division__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.08fr;
+  gap: 3.25rem;
+  align-items: center;
+}
+
+/* Alternating Reverse Layout on Desktop: Media on Left, Info on Right */
+.product-division__grid--reverse .product-division__media {
+  order: 1;
+}
+
+.product-division__grid--reverse .product-division__info {
+  order: 2;
+}
+
+/* Strictly Proportional Image Container */
+.product-division__media {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(7, 27, 58, 0.09);
+  border: 1px solid rgba(7, 27, 58, 0.08);
+  aspect-ratio: 16 / 10;
+  background-color: #E2E8F0;
+  max-height: 380px;
+}
+
+.product-division__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-division__media:hover .product-division__img {
+  transform: scale(1.035);
+}
+
+/* Floating Category Badge */
+.product-division__badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(7, 27, 58, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.85px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Subtle Gradient Overlay on Bottom */
+.product-division__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 16px 12px;
+  background: linear-gradient(to top, rgba(7, 27, 58, 0.88) 0%, rgba(7, 27, 58, 0) 100%);
+  color: #FFA3AB;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+/* Content Container - Compact & Balanced */
+.product-division__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-division__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--color-brand-red);
+  margin-bottom: 0.35rem;
+}
+
+.product-division__eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-brand-red);
+}
+
+.product-division__title {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 0.45rem;
+  line-height: 1.22;
+  letter-spacing: -0.3px;
+}
+
+.product-division__desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--color-charcoal-light);
+  margin-bottom: 0.85rem;
+}
+
+/* Compact 2x2 Specification Matrix */
+.product-division__specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+}
+
+.product-division__spec-item {
+  background: #FFFFFF;
+  border: 1px solid rgba(7, 27, 58, 0.08);
+  border-radius: 6px;
+  padding: 0.5rem 0.65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.bg-white .product-division__spec-item {
+  background: #F8FAFC;
+  border: 1px solid rgba(7, 27, 58, 0.07);
+}
+
+.product-division__spec-item:hover {
+  border-color: rgba(22, 61, 143, 0.3);
+  box-shadow: 0 2px 8px rgba(16, 45, 101, 0.04);
+}
+
+.product-division__spec-label {
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 750;
+  color: var(--color-navy);
+  line-height: 1.25;
+}
+
+.product-division__spec-val {
+  font-size: 0.73rem;
+  color: var(--color-charcoal-light);
+  line-height: 1.35;
+}
+
+/* Action & Sourcing Trust Row */
+.product-division__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.product-division__btn {
+  padding: 0.55rem 1.15rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.product-division__sourcing {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.74rem;
+  color: var(--color-charcoal-muted);
+  font-weight: 500;
+}
+
+.product-division__sourcing-icon {
+  color: #10B981;
+  font-weight: 800;
+}
+
+/* Responsive Adjustments for Division Showcase */
+@media (max-width: 992px) {
+  .product-division {
+    padding: 2.25rem 0;
+  }
+  .product-division__grid,
+  .product-division__grid--reverse {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .product-division__media {
+    order: -1 !important;
+    max-height: 320px;
+  }
+  .product-division__info {
+    order: 1 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-division__specs {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+  .product-division__title {
+    font-size: 1.45rem;
+  }
+}
+
 /* Editorial About Layout Styles */
 .editorial-quote {
   font-size: 1.25rem;
